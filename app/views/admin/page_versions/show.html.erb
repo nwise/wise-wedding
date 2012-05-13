@@ -1,0 +1,8 @@
+<h2>Page Version: <%= @page_version.version %></h2>
+<strong>Title:</strong> <%= @page_version.title %><br />
+<strong>Keywords:</strong> <%= @page_version.keywords %><br />
+<strong>Description:</strong> <%= @page_version.description %><br />
+<strong>URL:</strong> <%= @page_version.url_tag %><br />
+<strong>Content:</strong><br /><%= raw(@page_version.content) %>
+
+<%= link_to "Make this live", admin_page_versions_restore_url(@page_version) %>

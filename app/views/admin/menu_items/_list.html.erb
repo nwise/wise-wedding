@@ -1,0 +1,17 @@
+<% menu_item.children.each do |child| %>
+  <li id="<%= dom_id(child) %>" class='menu-list-item'>
+  <span class="menu-title"><i class='icon-resize-vertical'></i>&nbsp<%= child.label %></span>
+      <%r= link_to("<i class='icon-play-circle icon-white'></i>&nbsp; Create Submenu".html_safe,
+                  new_admin_menu_item_path(:parent_id => child.id),
+                  :id => "#{child.id}_add_child",
+                  :title => 'add-child',
+                  :class => 'btn btn-success') %>
+
+      <%= link_to("<i class='icon-edit icon-white'></i>&nbsp; Edit".html_safe,
+                  edit_admin_menu_item_path(child), :class => 'btn btn-primary') %>
+      <%= link_to("<i class='icon-trash icon-white'></i>&nbsp; Delete".html_safe, admin_menu_item_path(child),
+                                                      :confirm => 'Are you sure?',
+                                                      :method => :delete, :class => 'btn btn-danger') %>
+  </li>
+<% end %>
+

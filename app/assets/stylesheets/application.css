@@ -1,0 +1,155 @@
+html {
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+hr {
+  background-image:url(../images/seperator.png);
+  background-repeat:repeat-x;
+  border:none;
+  height:2px;
+  width:100%;
+  float:left;
+  clear:both;
+  margin: 5px 0;
+  }
+
+body
+ {
+  background-image:url(/images/header-bglarge.jpg);
+  width:100%;
+  background-position: 60% -14px;
+  background-repeat:repeat-x;
+  height: 100%;
+  position:absolute;
+} 
+
+.page-wrap {
+  position:relative;
+  max-width: 940px;
+  margin:0 auto;
+}
+
+#header-inner{
+  max-width:940px;
+  height: 200px;
+}
+
+#header-inner .logo a {
+  display: block;
+  float: left;
+  height: 20%;
+  margin: 72px 0 0;
+  width: 40%;
+  min-width:350px;
+}
+
+#tagline {
+  color: white;
+  display: block;
+  float: right;
+  font-size: 13px;
+  font-style: italic;
+  padding-bottom: 1%;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 50%;
+  top: 123px;
+}
+
+#menu {
+  background-color: black;
+  height: 42px;
+  top: 163px;
+  width: 100%;
+  clear:both;
+}
+
+#menu ul {
+  margin:0;
+  padding:10px 0 0;
+}
+
+#menu li {
+  border-right: 1px dotted #333333;
+  display: inline;
+  margin-right: -5px;
+  padding: 9px 0 14px;
+}
+
+#menu li:hover {
+  background-color:#333;
+}
+
+#menu li a {
+  color:white;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:bold;
+  padding:15px;
+  text-decoration:none;
+}
+  
+#menu li a:hover {
+  color: white;
+}
+
+.clear {
+  clear:both;
+}
+
+.carousel {
+  height:100%;
+  background-image:url(../images/shadow.png);
+  background-position:bottom;
+  background-repeat:no-repeat;
+  padding-bottom:22px;
+  max-width:940px;
+  }
+
+.carousel-caption {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 80%;
+}
+
+.carousel-caption {
+  color:white;
+}
+
+.carousel-caption {    
+  color:white;
+  line-height: 140%;
+  padding: 15px 15px 10px 15px;
+}
+
+.footer {
+  background-color:#333;
+  color: white;
+  padding-bottom: 25px;
+  font-size: 0.9em;
+}
+
+.footer > .span4 > p {
+  font-weight: normal;
+  margin: 0px 15px;
+}
+
+.footer > .span4 > h3 {
+    margin: 20px 15px;
+}
+
+.footer > .span4 > hr {
+  margin: 0px 15px;
+  max-width:90%;
+}
+
+#copyright{
+  margin: 0 ;
+  text-align: center;
+  color: white;
+  font-size:0.85em;
+  padding:15px 0px 0px 0px;
+  background-color: #333;
+}
+
+

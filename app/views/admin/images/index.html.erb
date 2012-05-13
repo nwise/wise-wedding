@@ -1,0 +1,38 @@
+<%= content_tag :div, :class => 'page-header' do %>
+  <%= content_tag :h1 do %>
+  Image List
+  <% end %>
+<% end %>
+
+<table class="table table-striped table-bordered">
+	<thead>
+  <tr>
+    <th>Thumbnail</th>
+    <th>Image URL</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+<% @admin_images.each do |admin_image| %>
+
+  <tr>
+  <td><%= image_tag admin_image.image.thumb.url %>
+    <td><%= admin_image.image.url %></td>
+    <td><%= link_to "<i class='icon-trash icon-white'></i>&nbsp;Delete".html_safe,
+                [:admin, admin_image],
+                :confirm => 'Are you sure?',
+                :method => :delete, 
+                :id => "destroy_#{admin_image.id}",
+                :class => 'btn btn-danger delete-page',
+                "data-content" => 'This will irreversibly delete all sizes of this image.', 
+                "data-original-title" => 'Are You Sure?' %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+<hr>
+<%= link_to "<i class='icon-play-circle icon-white'></i>&nbsp;Add an Image".html_safe, 
+            new_admin_image_path,
+            :class => 'btn btn-success' %>

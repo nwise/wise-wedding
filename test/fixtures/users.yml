@@ -1,0 +1,18 @@
+--- 
+users_000001: 
+  created_at: 2009-08-07 14:19:05
+  last_request_at: 2009-08-09 13:21:19
+  crypted_password: 4a478b2032777ff98e432cc9263facec1c4b13665e2b18c1a4d3fe2b0c3b6fac00fcd8fb9b4ebee2a9944255524c0b6d216f5806e88c5215e959256d765b00f0
+  updated_at: 2009-08-09 13:21:19
+  perishable_token: lb3zdIbseEtEiO21Qw4j
+  username: nwise
+  current_login_ip: 127.0.0.1
+  failed_login_count: "0"
+  id: "2"
+  current_login_at: 2009-08-09 13:21:19
+  password_salt: SI0vd-gm52uzaz0Atnrd
+  login_count: "9"
+  persistence_token: 2145616c4b0289a5fe1f705f01189f1a09f549214eb788c3cdc6ca269b99b4996ab66cccbbea59b2b54ad4256e8e7456346146b0ff18fae7aa43f95f8703a3ba
+  last_login_ip: 127.0.0.1
+  last_login_at: 2009-08-07 18:04:59
+  email: nwise@wrladv.com

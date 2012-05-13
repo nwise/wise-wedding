@@ -1,0 +1,38 @@
+body {
+  background-repeat:repeat-x;
+  margin:0;
+  border-top:10px solid #000;
+  background-color:#056D79;
+}
+
+h1 {
+  color:white;
+  margin:20px 0;
+}
+  
+h2 {
+  color:white;
+}
+
+h3 {
+  color: white;
+}
+
+address {
+  color: white;
+}
+
+a, li, ul, ol, td, tr {
+  color:white;
+  text-decoration:none;
+  }
+  
+a:hover {
+  text-decoration:underline;
+  color:white;
+}
+ 
+p {
+  color: white;
+  line-height: 1.5em;
+}

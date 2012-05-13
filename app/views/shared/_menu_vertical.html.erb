@@ -1,0 +1,7 @@
+<% unless menu.nil?   %>
+<ul>  
+<% menu.children.each do |menu_item| %>
+  <li class="links"><%= link_to menu_item.label, menu_item.path %></li>
+<% end %>
+</ul>
+<% end  %>

@@ -1,0 +1,28 @@
+<%= content_tag :div, :class => 'page-header' do %>
+  <%= content_tag :h1 do %>
+  Menu Admin
+  <% end %>
+<% end %>
+<h6>Drag & Drop to reorder the menu</h6>
+<p>
+<% @menu_items.each do |m| -%>
+  <ul>
+  <li style='list-style-type:none;width:35%'><%= "#{m.label.titleize}" %>
+      <%= link_to("<i class='icon-play-circle icon-white'></i>&nbsp; Add Submenu".html_safe,
+                  new_admin_menu_item_path(:parent_id => m.id),
+                  :id => "#{m.id}_add_child",
+                  :title => 'add-child',
+                  :class => 'btn btn-success') %>
+      <%#= link_to("<i class='icon-edit icon-white'></i>&nbsp; Edit Menu Item".html_safe,
+                  edit_admin_menu_item_path(m), :class => 'btn btn-primary') %>
+      <%= link_to("<i class='icon-trash icon-white'></i>&nbsp; Delete Menu".html_safe, admin_menu_item_path(m),
+                                                      :confirm => 'Are you sure?',
+                                                      :method => :delete, :class => 'btn btn-danger') %>
+    <ul id="menu">
+      <%= render :partial => 'list', :locals => {:menu_item => m} %>
+    </ul>
+    </li>
+  </ul>
+<% end -%>
+</p>
+<%#= link_to "<i class='icon-play-circle icon-white'></i>&nbsp;Add a Menu".html_safe, new_admin_menu_item_url, :class => 'btn btn-success' %>

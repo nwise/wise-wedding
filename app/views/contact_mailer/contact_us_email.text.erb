@@ -1,0 +1,16 @@
+A Contact Us form was filled out
+
+------------------------------------
+Name: <%= @contents.first_name + ' ' + @contents.last_name %>
+Address: <%= @contents.address1 %>
+<% unless @contents.address2.empty? -%>
+         <%= @contents.address2 %>
+<% end -%>
+City: <%= @contents.city %>
+State: <%= @contents.state %>
+Zip: <%= @contents.zip %>
+Phone: <%= @contents.phone %>
+Email Address: <%= @contents.email_address %>
+Company: <%= @contents.company %>
+Comments: <%= @contents.comments %>
+------------------------------------

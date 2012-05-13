@@ -1,0 +1,13 @@
+<fieldset>
+  <legend>Drag &amp; Drop to sort</legend>
+  <ul id="menu-item-list">
+    <% @menu_item.children.each do |child| %>
+    <li id="menuitem_<%= child.id %>">
+      <%= child.label %>
+    </li>
+    <% end %>
+  </ul>
+</fieldset>
+<%= sortable_element 'menu-item-list',
+                     :url => {:action => 'sort', :id => @menu_item},
+                     :complete => visual_effect(:highlight, 'menu-item-list') %>

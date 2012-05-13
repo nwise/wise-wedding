@@ -1,0 +1,13 @@
+<%= form_for([:admin, @admin_image], :as => :admin_image, :html => {:multipart => true}) do |f| %>
+  <%= render 'shared/error_messages', :target => @admin_image %>
+
+  <div class="control-group">
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Upload Image", :class => 'btn-primary', :id => 'image-upload-submit' %>
+    <span id="image-upload-spinner" style='float:right; margin: 15px 95px 15px 0px;', class='--btn-primary'></span>
+  </div>
+<% end %>

@@ -1,0 +1,7 @@
+<% unless menu.nil? %>
+<div class="menu-content">
+  <ul id="<%= id %>">
+    <%= render :partial => "shared/menu_item", :collection => menu.children  %>
+  </ul>
+</div>
+<% end %>

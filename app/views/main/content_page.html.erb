@@ -1,0 +1,12 @@
+<% if @page.url_tag =='index' %>
+<div id="landing-page-wrapper">
+  <div id="landing-page-copy">
+    <%= @page.content.html_safe %>
+  </div>
+  <div id="landing-page-right"></div>
+</div>
+<% else %>
+<div id="copy">
+  <%= @page.content.html_safe %>
+</div>
+<% end %>

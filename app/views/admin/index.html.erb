@@ -1,0 +1,7 @@
+<div class='container'>
+  <h1>Site Administration<h1>
+	<hr>
+	<%= link_to( "Click here to sign in with Google", 
+	                 user_omniauth_authorize_path(:google),
+	                 :class => 'btn btn-success') unless current_user %>
+</div>

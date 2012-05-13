@@ -1,0 +1,35 @@
+<%= form_for([:admin, @menu_item], :html => {:class =>'form-horizontal'}) do |f| %>
+   
+  <% if @menu_item.parent.nil? && params[:parent_id] %>
+    <%= f.hidden_field :parent_id, :value => params[:parent_id] %>  
+  <% elsif !@menu_item.parent.nil? %>
+    <p><strong>Parent</strong>: <%= @menu_item.parent.label %></p>
+  <% end %>
+
+  <%= content_tag :div, :class => 'control-group' do %> 
+    <%= f.label :label %>
+    <%= content_tag :div, :class => 'controls' do %>
+      <%= f.text_field :label, :class => 'input-xlarge' %>
+    <% end %>
+  <% end %>
+  
+  <%= content_tag :div, :class => 'control-group' do %>
+    <%= f.label :page_id, 'Page' %>
+    <%= content_tag :div, :class => 'controls' do %>
+      <%= f.collection_select :page_id, Page.published, :id, :url_tag, {:include_blank => true} %> 
+    <% end %>
+  <% end %>
+  
+  <%= content_tag :div, :class => 'control-group' do %>
+    <%= f.label :url, 'Path', :class => 'input-xlarge' %>
+    <%= content_tag :div, :class => 'controls' do %>
+      <%= f.text_field :url %>
+    <% end %>
+  <% end %>
+
+  <%= content_tag :div, :class => 'form-actions' do %>
+    <%= f.submit 'Create Menu Item', :class => 'btn btn-primary' %>
+    <%= link_to 'Back', admin_menu_items_path, :class => 'btn' %>
+  <% end %>
+
+<% end %>
