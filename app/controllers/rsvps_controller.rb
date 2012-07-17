@@ -82,4 +82,8 @@ class RsvpsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def authenticate_user
+    authenticate_user! unless Rails.env.test?
+  end
 end
