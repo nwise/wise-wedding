@@ -2,24 +2,24 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title><%= @page.title %> :: </title>
-    <meta name="keywords" content="<%= @page.keywords %>">
-    <meta name="description" content="<%= @page.description %>">
+    <title>Sara and Adam Wedding</title>
+    <meta name="keywords" content="<%#= @page.keywords %>">
+    <meta name="description" content="<%#= @page.description %>">
     <%= stylesheet_link_tag "bootstrap", "core", "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <div class="page-wrap container">
-      <%= render :partial => 'shared/header' %>
+      <%#= render :partial => 'shared/header' %>
       <%= yield %>
-      <%= render :partial => 'shared/footer' %>
+      <%#= render :partial => 'shared/footer' %>
       <div class="row-fluid" id="copyright">
         <div class='span12'>
           <hr>
         </div>
         <div class='span6'>
-          &copy; <%= Time.now.year %>
+          &copy; <%= Time.now.year %> Adam Wise
         </div>
         <div class='span4 offset4'>
           

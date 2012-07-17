@@ -1,0 +1,47 @@
+<div class='row-fluid'>
+  <div class='span9'>
+
+    <%= form_for(@rsvp, :html => {:class => 'form-horizontal'}) do |f| %>
+      <%= render 'shared/error_messages', :target => @rsvp %>
+
+      <%= content_tag :div, :class => 'control-group' do %>
+        <%= f.label :first_name, :class => 'control-label' %>
+        <%= content_tag :div, :class => 'controls' do %>
+          <%= f.text_field :first_name, :class => 'input-xlarge' %>
+        <% end %>
+      <% end %>
+
+      <%= content_tag :div, :class => 'control-group' do %>
+        <%= f.label :last_name, :class => 'control-label' %>
+        <%= content_tag :div, :class => 'controls' do %>
+          <%= f.text_field :last_name, :class => 'input-xlarge' %>
+        <% end %>
+      <% end %>
+
+      <%= content_tag :div, :class => 'control-group' do %>
+        <%= f.label :email_address, :class => 'control-label' %>
+        <%= content_tag :div, :class => 'controls' do %>
+          <%= f.text_field :email_address, :class => 'input-xlarge' %>
+        <% end %>
+      <% end %>
+
+      <%= content_tag :div, :class => 'control-group' do %>
+        <%= f.label :will_attend, :class => 'control-label' %>
+        <%= content_tag :div, :class => 'controls' do %>
+          <%= f.select :will_attend, {:yes => true, :no => false}, :class => 'input' %>
+        <% end %>
+      <% end %>
+
+      <%= content_tag :div, :class => 'control-group' do %>
+        <%= f.label :number_to_rsvp, :class => 'control-label' %>
+        <%= content_tag :div, :class => 'controls' do %>
+          <%= f.select :number_to_rsvp, [1,2,3,4,5,6], :class => 'input' %>
+        <% end %>
+      <% end %>
+      <div class="form-actions">
+        <%= f.submit "RSVP Now", :class => "btn-primary" %>
+        <%= link_to 'Cancel', root_url %>
+      </div>
+    <% end %>
+  </div>
+</div>
