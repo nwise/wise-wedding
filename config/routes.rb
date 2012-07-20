@@ -1,6 +1,8 @@
 CornerstoneCms::Application.routes.draw do
 
-  root :to => 'main#content_page'
+  resources :rsvps
+
+  root :to => 'rsvps#new'
 
   mount Ckeditor::Engine => '/ckeditor'
 

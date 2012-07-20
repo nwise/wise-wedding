@@ -26,32 +26,7 @@
     <div class="page-wrap container">
       <%= render :partial => 'shared/header' %>
 
-      <%= content_tag :div, :class => 'carousel' do %>
-        <%= content_tag :div, :class => 'carousel-inner' do %>
-
-          <%= content_tag :div, :class => "item active" do %>
-            <%= image_tag 'october_morning.jpg' %>
-            <%= content_tag :div, :class => 'carousel-caption' do %>
-            <p>
-            </p>
-            <% end %>
-          <% end %>
-
-          <%= content_tag :div, :class => "item" do %>
-            <%= image_tag 'refreshing.jpg' %>
-            <%= content_tag :div, :class => 'carousel-caption' do %>
-            <p></p>
-            <% end %>
-          <% end %>
-
-          <%= content_tag :div, :class => "item" do %>
-            <%= image_tag 'ocean.jpg' %>
-            <%= content_tag :div, :class => 'carousel-caption' do %>
-            <p></p>
-            <% end %>
-          <% end %>
-        <% end %>
-      <% end %>
+      
       <%= yield %>
       <%= render :partial => 'shared/footer' %>
       <div class="row-fluid" id="copyright">
