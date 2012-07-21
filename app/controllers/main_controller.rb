@@ -21,6 +21,10 @@ class MainController < ApplicationController
     end
   end
 
+  def gallery
+    
+  end
+
   def site_search
     @pages = Page.search(params[:search][:search_term])
   end
