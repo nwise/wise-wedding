@@ -7,6 +7,14 @@ body{
   margin: 0 auto;
 }
 
+.container{
+  color: white;
+}
+
+#copyright{
+  color: #333;
+}
+
 #menu {
   display: block;
   background-color: #0e4f54;

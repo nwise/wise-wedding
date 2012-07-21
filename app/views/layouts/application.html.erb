@@ -30,7 +30,9 @@ autoOpen: 0 //execute the gallery when page loads default 0 (1= yes, 0= no)
   <body>
     <div class="page-wrap container">
       <%= render :partial => 'shared/header' %>
-      <%= yield %>
+      <div style='margin: 20px 0px 20px 12px'>
+        <%= yield %>
+      </div>
       <%= render :partial => 'shared/footer' %>
     </div>
   </body>
