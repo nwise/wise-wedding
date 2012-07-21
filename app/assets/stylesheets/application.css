@@ -27,17 +27,17 @@ body{
 #menu li {
   display: inline;
   margin-right: -5px;
-  padding: 9px 10px 14px;
+  padding: 9px 10px 0px 0px;
 }
 
-#menu li:hover {
-  background-color:#333;
+#menu li a:hover {
+  background-color:#531543;
 }
 
 #menu li a {
   color:white;
   font-size:16px;
-  padding:15px;
+  padding:13px;
   text-decoration:none;
   font-family:"Century Gothic",Arial, Helvetica, sans-serif;
  }
@@ -45,3 +45,4 @@ body{
 #menu li a:hover {
   color: white;
 }
+

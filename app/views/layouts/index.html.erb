@@ -2,25 +2,12 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title><%= @page.title %> :: </title>
+    <title><%= @page.title %></title>
     <meta name="keywords" content="<%= @page.keywords %>">
     <meta name="description" content="<%= @page.description %>">
     <%= stylesheet_link_tag "bootstrap", "core", "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <script type="text/javascripts">
-    <% if Rails.env.production? -%>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-28608739-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    <% end -%>
-    </script>
   </head>
   <body>
     <div class="page-wrap container">
@@ -29,11 +16,6 @@
         <%= draw_menu 'main-menu', {} %>
       </div>
       <%= render :partial => 'shared/footer' %>
-      <div class="row-fluid" id="copyright">
-        <div class='span6'>
-          &copy; <%= Time.now.year %> Adam Wise - All photos courteys of Aly Martin Photography
-        </div>
-      </div>
     </div>
   </body>
 </html>

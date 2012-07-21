@@ -13,14 +13,7 @@
     <div class="page-wrap container">
       <%= render :partial => 'shared/header' %>
       <%= yield %>
-      <div class="row-fluid" id="copyright">
-        <div class='span6'>
-          &copy; <%= Time.now.year %> Adam Wise
-        </div>
-        <div class='span4 offset4'>
-          
-        </div>
-      </div>
+      <%= render :partial => 'shared/footer' %>
     </div>
   </body>
 </html>
