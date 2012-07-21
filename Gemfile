@@ -14,10 +14,10 @@ gem "acts_as_versioned", :git => "git://github.com/luismreis/acts_as_versioned.g
 gem 'thin'
 gem 'jquery-rails'
 gem 'acts_as_tree_rails3'
+gem 'mysql2'
 
 group :development, :test do
   gem 'cucumber'
-  gem 'cucumber-rails'
   gem 'webrat'
   gem 'rspec'
   gem 'rspec-rails'
@@ -31,3 +31,6 @@ group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
+group :test do
+  gem 'cucumber-rails'
+end
