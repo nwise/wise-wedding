@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.0'
 gem 'devise'
+gem 'devise-encryptable'
 gem 'omniauth-openid'
 gem 'will_paginate'
 gem 'pg'

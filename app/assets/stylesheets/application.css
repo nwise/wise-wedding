@@ -1,0 +1,47 @@
+body{
+  background-color: #67686a;
+}
+
+.page-wrap{
+  width: 940px;
+  margin: 0 auto;
+}
+
+#menu {
+  display: block;
+  background-color: #0e4f54;
+  height: 42px;
+  top: 163px;
+  width: 100%;
+  clear:both;
+  padding: 0;
+  margin: -5px 0 0 0;
+}
+
+#menu ul {
+  width: 100%;
+  margin:0 auto;
+  padding:12px 0 0;
+}
+
+#menu li {
+  display: inline;
+  margin-right: -5px;
+  padding: 9px 10px 14px;
+}
+
+#menu li:hover {
+  background-color:#333;
+}
+
+#menu li a {
+  color:white;
+  font-size:16px;
+  padding:15px;
+  text-decoration:none;
+  font-family:"Century Gothic",Arial, Helvetica, sans-serif;
+ }
+
+#menu li a:hover {
+  color: white;
+}

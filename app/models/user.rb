@@ -4,6 +4,14 @@ class User < ActiveRecord::Base
   
   has_many :roles, :through => :roles_user
   has_many :roles_user
+
+  def password=(pass)
+    self.encrypted_password = pass
+  end
+
+  def password
+    self.encrypted_password
+  end
   
   def self.find_for_open_id(access_token, signed_in_resource=nil)
     data = access_token.info
