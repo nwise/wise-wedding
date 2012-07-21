@@ -45,4 +45,18 @@ body{
 #menu li a:hover {
   color: white;
 }
+label{
+color:white;
+}
+
+.control-group.warning > label, .alert, .control-group.warning .help-inline{
+  color: #0e4f54;
+}
+.control-group.warning input{
+  color: #000;
+  border-color: #0e4f54;
+}
+
+
+
 

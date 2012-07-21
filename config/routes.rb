@@ -1,7 +1,6 @@
 CornerstoneCms::Application.routes.draw do
 
   resources :rsvps
-  match 'gallery' => 'main#gallery'
 
   root :to => 'main#content_page'
 

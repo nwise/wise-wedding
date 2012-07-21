@@ -16,7 +16,11 @@ class RsvpsController < ApplicationController
   # GET /rsvps/1.json
   def show
     @rsvp = Rsvp.find(params[:id])
-
+    if @rsvp.will_attend
+      @message = "Great! We are looking forward to seeing you in September."
+    else
+      @message = "We are sorry you aren't attending, you wll be missed."
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @rsvp }
@@ -46,7 +50,7 @@ class RsvpsController < ApplicationController
 
     respond_to do |format|
       if @rsvp.save
-        format.html { redirect_to @rsvp, notice: 'Rsvp was successfully created.' }
+        format.html { redirect_to rsvp_url(@rsvp)}
         format.json { render json: @rsvp, status: :created, location: @rsvp }
       else
         format.html { render action: "new" }
