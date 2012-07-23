@@ -1,6 +1,6 @@
 class RsvpsController < ApplicationController
 
-  before_filter :authenticate_user, :except => [:new, :create]
+  before_filter :authenticate_user, :except => [:new, :create, :show]
   # GET /rsvps
   # GET /rsvps.json
   def index

@@ -65,6 +65,14 @@ color:white;
   border-color: #0e4f54;
 }
 
-
+.body-content{
+  min-height:450px;
+  margin: 0 0 10px 0;
+  padding: 20px 0 100px 12px;
+  border-bottom: 3px solid white;
+  background-image:url("/images/bottom_fade.png");
+  background-position:bottom;
+  background-repeat:repeat-x;
+}
 
 

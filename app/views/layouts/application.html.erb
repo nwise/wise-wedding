@@ -5,8 +5,8 @@
     <title>Sara and Adam Wedding</title>
     <meta name="keywords" content="<%#= @page.keywords %>">
     <meta name="description" content="<%#= @page.description %>">
-    <%= stylesheet_link_tag "bootstrap", "core", "application" %>
     <link href="/ppgallery/css/ppgallery.css" rel="stylesheet" type="text/css" />
+    <%= stylesheet_link_tag "bootstrap", "core", "application" %>
     <link href="/ppgallery/css/dark-hive/jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script> 
@@ -18,19 +18,19 @@ screenFade: 0.9, //fade screen level. default 0.5
 screenColor: '#505050', //choose color of background. default black
 showTitle: 1, //toggles to show the title. default 1 (1= yes, 0= no)
 thumbWidth: 50, //control the gallery thumbnail size. default 60(pixels)
-maxWidth: '', //control max width of large image and thumbnail box. leave blank for no restrictions
-slideShowDelay: '2', //control the slideshow interval. defaults at 3 seconds
+maxWidth: '900', //control max width of large image and thumbnail box. leave blank for no restrictions
+slideShowDelay: '3', //control the slideshow interval. defaults at 3 seconds
 showHiddenGalleryButton: '', //hide the gallery and assign a button
 autoOpen: 0 //execute the gallery when page loads default 0 (1= yes, 0= no)
 });
           });
-    </script>
-    <%= csrf_meta_tags %>
+</script>
+<%= csrf_meta_tags %>
   </head>
   <body>
     <div class="page-wrap container">
       <%= render :partial => 'shared/header' %>
-      <div style='margin: 20px 0px 20px 12px'>
+      <div class='body-content' >
         <%= yield %>
       </div>
       <%= render :partial => 'shared/footer' %>
