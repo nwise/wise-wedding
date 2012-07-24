@@ -2,6 +2,15 @@ body{
   background-color: #67686a;
 }
 
+a {
+	color:white;
+	text-decoration:bold;
+}
+
+a:hover {
+	text-decoration:underline;
+	color:white;
+}
 .page-wrap{
   width: 940px;
   margin: 0 auto;
@@ -53,6 +62,7 @@ body{
 #menu li a:hover {
   color: white;
 }
+
 label{
 color:white;
 }
