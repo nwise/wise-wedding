@@ -1,11 +1,15 @@
 body{
   background-color: #67686a;
 }
-
+p {
+ font-size: 15px;
+}
 a {
 	color:white;
 	text-decoration:bold;
 }
+
+h3 { color:white;}
 
 a:hover {
 	text-decoration:underline;
