@@ -30,7 +30,7 @@ a:hover {
 
 #menu {
   display: block;
-  background-color: #0e4f54;
+  background-color: #156395;
   height: 42px;
   top: 163px;
   width: 100%;
@@ -52,7 +52,7 @@ a:hover {
 }
 
 #menu li a:hover {
-  background-color:#531543;
+  background-color:#74194c;
 }
 
 #menu li a {
@@ -76,7 +76,7 @@ color:white;
 }
 .control-group.warning input{
   color: #000;
-  border-color: #0e4f54;
+  border-color: #156395;
 }
 
 .body-content{
