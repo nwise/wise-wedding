@@ -10,7 +10,9 @@ a {
 }
 
 h3 { color:white;}
-
+h2 { color:white;
+	 width:100%;
+	 border-bottom: 1px solid white;}
 a:hover {
 	text-decoration:underline;
 	color:white;
@@ -82,7 +84,7 @@ color:white;
 .body-content{
   min-height:450px;
   margin: 0 0 10px 0;
-  padding: 20px 0 100px 12px;
+  padding: 20px 12px 100px 12px;
   border-bottom: 3px solid white;
   background-image:url("/images/bottom_fade.png");
   background-position:bottom;
