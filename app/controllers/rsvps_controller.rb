@@ -1,3 +1,5 @@
+require 'csv'
+
 class RsvpsController < ApplicationController
 
   before_filter :authenticate_user, :except => [:new, :create, :show]
@@ -7,7 +9,9 @@ class RsvpsController < ApplicationController
     @rsvps = Rsvp.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html{
+        render :index, :layout => 'admin'
+      }  # index.html.erb
       format.json { render json: @rsvps }
     end
   end
@@ -41,6 +45,7 @@ class RsvpsController < ApplicationController
   # GET /rsvps/1/edit
   def edit
     @rsvp = Rsvp.find(params[:id])
+    render :edit, :layout => 'admin'
   end
 
   # POST /rsvps
@@ -66,13 +71,29 @@ class RsvpsController < ApplicationController
 
     respond_to do |format|
       if @rsvp.update_attributes(params[:rsvp])
-        format.html { redirect_to @rsvp, notice: 'Rsvp was successfully updated.' }
+        format.html { redirect_to rsvps_url, notice: 'Rsvp was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
         format.json { render json: @rsvp.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def download
+    list = Rsvp.all
+
+    csv_string = CSV.generate do |csv|
+      csv << ["First Name", "Last Name", "Email Address", "Attending?", "Number Attending"]
+      list.each do |item|
+        csv << [item.first_name,
+                item.last_name,
+                item.email_address,
+                item.will_attend,
+                item.number_to_rsvp]
+      end
+    end
+    send_data csv_string, :type => "text/plain", :filename => "rsvp_list.csv", :disposition => 'attachment'
   end
 
   # DELETE /rsvps/1

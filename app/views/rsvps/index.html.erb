@@ -1,21 +1,28 @@
-<h1>Listing rsvps</h1>
-
-<table>
+<h1>Listing RSVPs</h1>
+<br>
+<p>
+<%= link_to "Download List", "#" %>
+</p>
+<br>
+<table class="table table-striped table-bordered">
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Attending?</th>
+    <th>#</th>
+    <th>Actions</th>
+
   </tr>
 
-<% @rsvps.each do |rsvp| %>
+  <% @rsvps.each do |rsvp| %>
   <tr>
-    <td><%= link_to 'Show', rsvp %></td>
-    <td><%= link_to 'Edit', edit_rsvp_path(rsvp) %></td>
-    <td><%= link_to 'Destroy', rsvp, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= rsvp.first_name %> <%= rsvp.last_name%></td>
+    <td><%= rsvp.email_address %></td>
+    <td><%= rsvp.will_attend ? "Yes" : "No" %></td>
+    <td><%= rsvp.number_to_rsvp %></td>
+    <td><%= link_to "<i class='icon-edit icon-white'></i>&nbsp;Edit".html_safe, edit_rsvp_path(rsvp), :class => "btn btn-primary" %></td>
   </tr>
-<% end %>
+  <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New Rsvp', new_rsvp_path %>
+<%= link_to "Download List", download_rsvps_url %>

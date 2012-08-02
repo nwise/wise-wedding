@@ -1,5 +1,6 @@
 CornerstoneCms::Application.routes.draw do
 
+  match '/rsvps/download' => 'rsvps#download', :as => 'download_rsvps'
   resources :rsvps
 
   root :to => 'main#content_page'
@@ -10,6 +11,7 @@ CornerstoneCms::Application.routes.draw do
   devise_scope :user do
     get "/logout" => "devise/sessions#destroy"
   end
+
 
   resources :files
   resources :file_browsers
