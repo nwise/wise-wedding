@@ -9,10 +9,12 @@
     <link href="/ppgallery/css/ppgallery.css" rel="stylesheet" type="text/css" />
     <link href="/ppgallery/css/dark-hive/jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css" />
 
-    <%= stylesheet_link_tag "bootstrap", "core", "application" %>    
+    <%= stylesheet_link_tag "bootstrap", "core", "application" %>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script> 
-    <script type="text/javascript" src="/ppgallery/js/ppgallery.js"></script> 
+    <% if @page %>
+    <script type="text/javascript" src="/ppgallery/js/ppgallery.js"></script>
+    <% end %>
     <script type="text/javascript">
       $(document).ready(function() {
         $('#gallery').ppGallery({

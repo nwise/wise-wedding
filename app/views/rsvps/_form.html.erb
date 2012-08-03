@@ -7,7 +7,7 @@
       <%= content_tag :div, :class => "control-group #{f_name_error}" do %>
         <%= label_tag :first_name, "first name", :class => 'control-label' %>
         <%= content_tag :div, :class => 'controls' do %>
-          <%= f.text_field :first_name, :class => 'input-xlarge' %>
+          <%= f.text_field :first_name, :class => 'input-xlarge', :size => 100 %>
         <% end %>
       <% end %>
 
@@ -15,7 +15,7 @@
       <%= content_tag :div, :class => "control-group #{l_name_error}" do %>
         <%= label_tag :last_name, "last name", :class => 'control-label' %>
         <%= content_tag :div, :class => 'controls' do %>
-          <%= f.text_field :last_name, :class => 'input-xlarge' %>
+          <%= f.text_field :last_name, :class => 'input-xlarge', :size => 100 %>
         <% end %>
       <% end %>
 
