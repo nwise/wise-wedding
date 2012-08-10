@@ -6,8 +6,9 @@ class RsvpsController < ApplicationController
   # GET /rsvps
   # GET /rsvps.json
   def index
-    @rsvps = Rsvp.all
-
+    @rsvps = Rsvp.paginate(:per_page => 20, :page => params[:page])
+    @attending_count = @rsvps.select{|r| r.will_attend?}.sum{|r| r.number_to_rsvp}
+    @not_attending_count = @rsvps.select{|r| !r.will_attend?}.sum{|r| r.number_to_rsvp}
     respond_to do |format|
       format.html{
         render :index, :layout => 'admin'
